@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        article {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        time {
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        /* Added button style */
+    </style>
+</head>
+<body>
+    <form action="/feed" method="POST">
+    <header>
+        <h1>{{username}}'s Feed</h1>
+        <input style="display: none;" type="text" name="username" value={{username}}></input>
+    </header>
+</form>
+    <main>
+        <h1>Your Feed</h1>
+        {% for i in range(l) %}
+            {% set my_array = detail[i].split(sep=',') %}
+            <article>
+                    <h3>Title: {{ my_array[0]}}</h3>
+                    <h5>BY:{{ my_array[3]}}</h5>
+                    <p style="font-style: italic; font-size: medium;">Published on:{{ my_array[1]}}</p>
+                    <p style="font-family: 'Times New Roman', Times, serif;">{{ my_array[2]}}</p>
+            </article>
+            <br>
+        {% endfor %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Blog</p>
+    </footer>
+</body>
+</html>

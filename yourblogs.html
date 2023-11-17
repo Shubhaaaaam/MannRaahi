@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #fff;
+}
+
+header {
+    background-color:rgba(128, 128, 128, 0.466);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Make the position relative for absolute positioning of buttons */
+}
+
+button {
+    background-color:rgba(24, 23, 23, 0.664);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+}
+.button1:hover {
+        background-color: #0056b3;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+time {
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    background-color:rgba(128, 128, 128, 0.466);
+    color:white;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    text-align: center;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman';
+    text-align: justify;
+}
+    </style>
+</head>
+<body>
+    <form action="/selection" method="POST">
+    <header>
+        <h1>{{username}}'s Blogs</h1>
+        <input style="display: none;" type="text" name="username" value={{username}}></input>
+        <button class="button1" name="navo" value="wr" type="submit" style="top: 35px; right: 60px;">Write A Blog</button>
+    </header>
+</form>
+    <main>
+        <h1>Your Blogs</h1>
+        {% for i in range(l) %}
+            {% set my_array = detail[i].split(sep=',') %}
+            <article>
+                    <h3>{{ my_array[0]}}</h3>
+                    <p style="font-style: italic; font-size: medium;">Published on:{{ my_array[1]}}</p>
+                    <p style="font-family: 'Times New Roman', Times, serif;">{{ my_array[2]}}</p>
+            </article>
+        {% endfor %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Blog</p>
+    </footer>
+</body>
+</html>

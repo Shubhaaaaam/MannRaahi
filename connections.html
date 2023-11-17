@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        article {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        time {
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            background-color:rgba(128, 128, 128, 0.466);
+            color:white;
+            padding: 10px 0;
+            font-size: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            text-align: center;
+            padding-left: 10px;
+            font-size: 16px;
+            padding-bottom: 17%;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman';
+            text-align: justify;
+        }
+        button{
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <form action="/connections" method="POST">
+    <header>
+        <h1>{{username}}'s Connections</h1>
+        <input style="display: none;" type="text" name="username" value={{username}}></input>
+    </header>
+    <main>
+        <h1>Connections Available</h1>
+        {% for i in my_array %}
+            <article>
+                <div>
+                    <h2>{{i}}</h2>
+                    <button style="position:relative;" name="Follow" value="{{i}}" type="submit">Follow</button>
+                </div>
+            </article>
+        {% endfor %}
+    </main>
+    </form>
+    <footer>
+        <p>&copy; 2023 ExploreLife</p>
+    </footer>
+</body>
+</html>
