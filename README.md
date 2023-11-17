@@ -30,5 +30,6 @@ MySQL is used to store user data, blog posts, following, and many other necessar
 Tables in the database must include users, blog posts, following, etc.
 
 #Admin Task
+
 Create a database named blog on MySQL server and create a table named users.
 The table must contain columns named username , passwor, contact, sex, DOB, connections, blogs.
