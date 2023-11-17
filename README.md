@@ -11,7 +11,7 @@ This ID serves as a unique identifier for each user.
 
 Blog Posting:
 Logged-in users can create and publish blog posts on the website.
-These blog posts are likely stored in the MySQL database, associating each post with the respective user.
+These blog posts are stored in the MySQL database, associating each post with the respective user.
 
 Following Members:
 Users have the ability to follow other members on the server.
@@ -27,7 +27,6 @@ This could include features such as liking, commenting, or sharing blog posts.
 
 Data Storage:
 MySQL is used to store user data, blog posts, following, and many other necessary information.
-Tables in the database must include users, blog posts, following, etc.
 
 #Admin Task:
 
