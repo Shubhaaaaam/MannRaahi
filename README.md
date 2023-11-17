@@ -1,4 +1,4 @@
-# Blog-Website:
+# Blog-Website
 
 Technology Stack:
 Python: The programming language used for the backend logic and server-side processing.
