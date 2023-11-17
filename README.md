@@ -1,4 +1,4 @@
-# Blog-Website
+# Blog-Website:
 
 Technology Stack:
 Python: The programming language used for the backend logic and server-side processing.
@@ -29,7 +29,7 @@ Data Storage:
 MySQL is used to store user data, blog posts, following, and many other necessary information.
 Tables in the database must include users, blog posts, following, etc.
 
-#Admin Task
+#Admin Task:
 
 Create a database named blog on MySQL server and create a table named users.
 The table must contain columns named username , passwor, contact, sex, DOB, connections, blogs.
