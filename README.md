@@ -1,5 +1,3 @@
-# Blog-Website
-
 # MannRaahi
 
 MannRaahi is a web-based blogging platform developed using Python's Flask framework and MySQL. It allows users to create, publish, and read blog posts, fostering a community of writers and readers.
